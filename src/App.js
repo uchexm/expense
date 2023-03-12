@@ -1,12 +1,22 @@
-import ExpenseItem from "./components/ExpenseItem";
-import Expenses from "./components/Expenses";
+import React from "react";
+import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
   const expenses = [
-    { title: "Sharp Sand", amount: 302.76, date: new Date(2023, 3, 9) },
-    { title: "Cement", amount: 102.16, date: new Date(2023, 3, 10) },
-    { title: "Grey Water", amount: 31.01, date: new Date(2023, 3, 10) },
-    { title: "Gravel", amount: 459.33, date: new Date(2023, 3, 10) },
+    {
+      id: "e1",
+      title: "Sharp Sand",
+      amount: 302.76,
+      date: new Date(2023, 3, 9),
+    },
+    { id: "e2", title: "Cement", amount: 102.16, date: new Date(2023, 3, 10) },
+    {
+      id: "e3",
+      title: "Grey Water",
+      amount: 31.01,
+      date: new Date(2023, 3, 10),
+    },
+    { id: "e4", title: "Gravel", amount: 459.33, date: new Date(2023, 3, 10) },
   ];
   return (
     <div className="App">
@@ -14,6 +24,6 @@ function App() {
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
